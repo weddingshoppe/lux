@@ -115,7 +115,7 @@ function updateBelongsTo({
 
     Reflect.set(record, opts.foreignKey, foreignKeyValue);
 
-    if (inverseOpts && inverseOpts.type === 'hasOne' && !record.isNew) {
+    if (inverseOpts && inverseOpts.type === 'hasOne') {
       return [
         record.constructor
           .table()
